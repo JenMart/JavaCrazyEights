@@ -6,7 +6,7 @@ import java.util.*;
  * Created by jensinamart on 10/19/15.
  */
 public class CardDeck {
-
+    //
     static String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
     static String[] suits = {"Spade", "Heart", "Club", "Diamond"};
     public static ArrayList deck = shuffleCards(ranks, suits);//Takes ranks and suits and sends them to method.
