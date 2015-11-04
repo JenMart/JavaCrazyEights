@@ -1,3 +1,5 @@
+
+
 import java.util.*;
 
 /**
@@ -5,14 +7,20 @@ import java.util.*;
  */
 public class CardDeck {
 
-    String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
-    String[] suits = {"Spade", "Heart", "Club", "Diamond"};
+    static String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+    static String[] suits = {"Spade", "Heart", "Club", "Diamond"};
+//    public static ArrayList deck = shuffle(ranks, suits);
+    public static ArrayList deck = shuffle(ranks, suits);
+    public ArrayList getDiscard() {
+        return discard;
+    }
+    public void setDiscard(ArrayList discard) {
+        this.discard = discard;
+    }
+    public static ArrayList discard = new ArrayList();
 
 
-    public ArrayList deck = shuffle(ranks, suits);
-
-
-    private ArrayList shuffle(String[] ranks, String[] suits){
+    protected static ArrayList shuffle(String[] ranks, String[] suits){
     ArrayList<String> genDeck = new ArrayList<String>();
     String card = "";
 
