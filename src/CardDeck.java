@@ -9,8 +9,7 @@ public class CardDeck {
 
     static String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
     static String[] suits = {"Spade", "Heart", "Club", "Diamond"};
-//    public static ArrayList deck = shuffle(ranks, suits);
-    public static ArrayList deck = shuffle(ranks, suits);
+    public static ArrayList deck = shuffleCards(ranks, suits);//Takes ranks and suits and sends them to method.
     public ArrayList getDiscard() {
         return discard;
     }
@@ -20,7 +19,7 @@ public class CardDeck {
     public static ArrayList discard = new ArrayList();
 
 
-    protected static ArrayList shuffle(String[] ranks, String[] suits){
+    protected static ArrayList shuffleCards(String[] ranks, String[] suits){
     ArrayList<String> genDeck = new ArrayList<String>();
     String card = "";
 
@@ -43,15 +42,5 @@ public class CardDeck {
     public void setDeck(ArrayList deck) {
         this.deck = deck;
     }
-//    System.out.println("Done! Total cards are " + deck.size());
-//    System.out.println("Price 0 to draw a card");
-//    x = scanner.nextInt();
-//    while (x == 0){ //Allows user to randomly select a card from the deck.
-//        Random random = new Random();
-//        System.out.println(deck.get(random.nextInt(52)));
-//        System.out.println("Price 0 to draw a card");
-//        x = scanner.nextInt();
-//    }
-
 
 }
